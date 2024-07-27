@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: bisque;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: aqua;
+            z-index: 1000;
+            border-radius: 10px;
+            height: 50px;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            /* Ensure the ul takes full height of the header */
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            /* Ensure the a takes full height of the header */
+            box-sizing: border-box;
+        }
+
+        nav ul li:hover {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #581717;
+            color: #ccc;
+            border-radius: 5px;
+        }
+
+        .name {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            padding: 100px 20px 60px;
+            display: flex;
+            font-size: large;
+            box-sizing: border-box;
+            margin-top: 60px;
+            justify-content: space-around;
+            /* Add margin to avoid overlap with fixed header */
+        }
+
+        .prof {
+            margin-top: 100px;
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+
+        .top {
+            height: auto;
+
+        }
+
+        .text {
+            padding: 0px;
+            text-align: left;
+        }
+
+        .txt {
+            color: #581717;
+        }
+
+        .profile {
+            height: auto;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        .profile img {
+            border-radius: 50%;
+            height: 200px;
+            width: 250px;
+            max-width: 100%;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px 6px;
+            justify-content: center;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+            width: 45%;
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        p {
+            padding: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .resume {
+    padding: 50px 5px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.r-content {
+    background-color: aliceblue;
+    height: 800px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add some shadow for a paper-like effect */
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure it takes the full width of the parent */
+}
+
+.info .personal {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Align text to the left */
+}
+
+.info .pic img {
+    /* Make the image round */
+}
+
+.content {
+    flex: 1; /* Allow the content to take up the remaining space */
+    padding: 20px;
+    text-align: left; /* Adjust this based on your design preference */
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#place">Place</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="name" id="home">
+        <div class="prof">
+            <div class="top">
+                <h2>Marcus Jeffrey Palad</h2>
+                <p class="text">I'm <span class="txt"></span></p>
+            </div>
+            <div class="profile">
+                <img src="./profile.webp" alt="no data">
+            </div>
+        </div>
+    </div>
+    <div class="container" id="place">
+        <h1>Places To Go</h1>
+        <div class="card">
+            <img src="./machu-pichu.jpg" alt="Machu Picchu, Peru">
+            <h1><span>1.</span> Machu Picchu, Peru</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel consequuntur nesciunt perspiciatis
+                quos, placeat, praesentium in maiores perferendis, dolorem soluta esse deleniti omnis totam
+                beatae. Mollitia consequuntur beatae ullam quisquam!</p>
+        </div>
+        <div class="card">
+            <img src="./canyon.jpg" alt="The Grand Canyon, Arizona">
+            <h1><span>2.</span> The Grand Canyon, Arizona</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel consequuntur nesciunt perspiciatis
+                quos, placeat, praesentium in maiores perferendis, dolorem soluta esse deleniti omnis totam
+                beatae. Mollitia consequuntur beatae ullam quisquam!</p>
+        </div>
+        <div class="card">
+            <img src="./rome.jpg" alt="Rome, Italy">
+            <h1><span>3.</span> Rome, Italy</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel consequuntur nesciunt perspiciatis
+                quos, placeat, praesentium in maiores perferendis, dolorem soluta esse deleniti omnis totam
+                beatae. Mollitia consequuntur beatae ullam quisquam!</p>
+        </div>
+        <div class="card">
+            <img src="./maui.jpg" alt="Maui, Hawaii">
+            <h1><span>4.</span> Maui, Hawaii</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel consequuntur nesciunt perspiciatis
+                quos, placeat, praesentium in maiores perferendis, dolorem soluta esse deleniti omnis totam
+                beatae. Mollitia consequuntur beatae ullam quisquam!</p>
+        </div>
+        <div class="card">
+            <img src="./new-zealand.jpg" alt="New Zealand">
+            <h1><span>5.</span> New Zealand</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel consequuntur nesciunt perspiciatis
+                quos, placeat, praesentium in maiores perferendis, dolorem soluta esse deleniti omnis totam
+                beatae. Mollitia consequuntur beatae ullam quisquam!</p>
+        </div>
+        <div class="card">
+            <img src="./istanbul.jpg" alt="Istanbul, Turkey">
+            <h1><span>6.</span> Istanbul, Turkey</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel consequuntur nesciunt perspiciatis
+                quos, placeat, praesentium in maiores perferendis, dolorem soluta esse deleniti omnis totam
+                beatae. Mollitia consequuntur beatae ullam quisquam!</p>
+        </div>
+        <div class="card">
+            <img src="./angkor.jpg" alt="Angkor Wat, Cambodia">
+            <h1><span>7.</span> Angkor Wat, Cambodia</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel consequuntur nesciunt perspiciatis
+                quos, placeat, praesentium in maiores perferendis, dolorem soluta esse deleniti omnis totam
+                beatae. Mollitia consequuntur beatae ullam quisquam!</p>
+        </div>
+        <div class="card">
+            <img src="./bali.jpg" alt="Bali">
+            <h1><span>8.</span> Bali</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel consequuntur nesciunt perspiciatis
+                quos, placeat, praesentium in maiores perferendis, dolorem soluta esse deleniti omnis totam
+                beatae. Mollitia consequuntur beatae ullam quisquam!</p>
+        </div>
+        <div class="card">
+            <img src="./london.jpg" alt="London, England">
+            <h1><span>9.</span> London, England</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel consequuntur nesciunt perspiciatis
+                quos, placeat, praesentium in maiores perferendis, dolorem soluta esse deleniti omnis totam
+                beatae. Mollitia consequuntur beatae ullam quisquam!</p>
+        </div>
+        <div class="card">
+            <img src="./paris.jpg" alt="Paris, France">
+            <h1><span>10.</span> Paris, France</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel consequuntur nesciunt perspiciatis
+                quos, placeat, praesentium in maiores perferendis, dolorem soluta esse deleniti omnis totam
+                beatae. Mollitia consequuntur beatae ullam quisquam!</p>
+        </div>
+    </div>
+
+    <div class="resume" id="resume">
+        <div class="me">
+            <h1>THIS IS ME</h1>
+        </div>
+        <div class="r-content">
+            <!-- Content goes here -->
+            <div class="info">
+                <div class="personal">
+                    <h2>Marcus Jeffrey Palad</h2>
+                    <p>Blk 33 Lot 14 Brgy San Rafael 1</p>
+                </div>
+                <div class="pic">
+                    <img src="./profile.webp" alt="invalid picture" height="100px" width="100px">
+                </div>
+
+            </div>
+            <div class="cv">
+                <div class="objective">
+                    <h2>Objective</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente aspernatur maxime nulla magnam nesciunt dignissimos. Voluptatibus maxime voluptatum, voluptates deleniti corrupti deserunt esse aperiam architecto! Ab eos fuga tempora nobis.</p>
+                </div>
+                <div class="work">
+                    <h2>Work Experience</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa adipisci nesciunt minus ad earum? Eveniet tenetur qui quam eos quasi consequatur culpa hic cupiditate reprehenderit debitis, exercitationem incidunt modi.</p>
+                </div>
+                <div class="education">
+                    <h2>Education</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa adipisci nesciunt minus ad earum? Eveniet tenetur qui quam eos quasi consequatur culpa hic cupiditate reprehenderit debitis, exercitationem incidunt modi.</p>
+                </div>
+                <div class="interest">
+                    <h2>Interest</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa adipisci nesciunt minus ad earum? Eveniet tenetur qui quam eos quasi consequatur culpa hic cupiditate reprehenderit debitis, exercitationem incidunt modi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var txt = new Typed(".txt", {
+            strings: ["an aspiring Programmer", "a Gamer"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
